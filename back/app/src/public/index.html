@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/bulma.min.css" />
+    <script src="/javascripts/common.js" defer></script>
+    <script src="/javascripts/index.js" defer></script>
+    <title>社内掲示板 | トップページ</title>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div id="navbarBasicExample" class="navbar-menu is-active">
+        <div class="navbar-start">
+          <div class="buttons">
+            <a class="navbar-item" href="/">
+              <h1><strong>社内掲示板</strong></h1>
+            </a>
+            <div id="username" class="navbar-item"></div>
+          </div>
+        </div>
+        <div class="navbar-end">
+          <div class="buttons">
+            <a class="navbar-item" href="/users.html">
+              ユーザー一覧
+            </a>
+            <a class="navbar-item" href="/signup.html">
+              ユーザー登録
+            </a>
+            <a id="login-logout" class="navbar-item"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <div class="columns is-centered">
+        <form id="search-form" class="column is-half">
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input id="search-input" class="input" type="search" />
+            </div>
+            <div class="control">
+              <button class="button is-primary">
+                検索
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <table class="table is-fullwidth">
+        <thead>
+          <tr>
+            <th>タイトル</th>
+            <th>投稿者</th>
+            <th>投稿日時</th>
+            <th>更新日時</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="columns is-centered">
+        <form id="form" class="column is-half">
+          <div class="field">
+            <label class="label" for="title">タイトル</label>
+            <div class="control">
+              <input id="title" class="input" required />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="textarea">本文</label>
+            <div class="control">
+              <textarea id="textarea" class="textarea" required></textarea>
+            </div>
+          </div>
+          <div class="control">
+            <button class="button is-primary">書き込む</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
